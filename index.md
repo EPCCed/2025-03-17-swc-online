@@ -57,10 +57,6 @@ It looks like you are setting up a website for a Software Carpentry curriculum b
 {% endunless %}
 {% endif %}
 
-<h2>Registration</h2>
-<p>Please use the <a href="https://safe.epcc.ed.ac.uk/TransitionServlet/TrainingCourse/250317-software-carpentry">ARCHER2 course registration form</a> to sign up for the workshop.</p>
-<hr/>
-
 {% comment %}
 EVENTBRITE
 
@@ -338,23 +334,11 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
 <h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-{% if site.carpentry == "incubator" %}
-<p><a href="{{ site.incubator_pre_survey }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.incubator_post_survey }}">Post-workshop Survey</a></p>
-{% elsif site.incubator_pre_survey or site.incubator_post_survey %}
-<div class="alert alert-danger">
-WARNING: you have defined custom pre- and/or post-survey links for
-a workshop not configured for The Carpentries Incubator
-(the value of `curriculum` is not set to `incubator` in `_config.yml`).
-Please comment out the `incubator_pre_survey` and `incubator_post_survey` fields
-in `_config.yml` or, if this workshop is teaching a lesson in the Incubator,
-change the value of `carpentry` to `incubator`.
-</div>
-{% else %}
+<p>Please be sure to complete these surveys <strong>before</strong> the workshop:</p>
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
+<p>Please be sure to complete these surveys <strong>after</strong> the workshop:</p>
+<p><a href="https://www.archer2.ac.uk/training/feedback/?course=250317-software-carpentry">ARCHER2 course feedback</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% endif %}
 
 <hr/>
 
